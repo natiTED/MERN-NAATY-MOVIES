@@ -98,8 +98,8 @@ const UpdateMovie = () => {
 
   const handleDeleteMovie = async () => {
     try {
-      toast.success("Movie deleted successfully");
       await deleteMovie(id);
+      toast.success("Movie deleted successfully");
       navigate("/movies");
     } catch (error) {
       console.error("Failed to delete movie:", error);
